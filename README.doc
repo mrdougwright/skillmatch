@@ -1,0 +1,9 @@
+== README
+
+This is a beta app that simply matches skillsets of employees to those wanted by employers. Simple.
+
+Basic setup:
+Ruby 2 Rails 4 app with Postgres for Heroku
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
