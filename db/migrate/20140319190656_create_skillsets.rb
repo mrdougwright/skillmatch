@@ -2,7 +2,7 @@ class CreateSkillsets < ActiveRecord::Migration
   def change
     create_table :skillsets do |t|
 
-      t.string :type
+      t.string :name
 
       t.timestamps
     end

@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319190656) do
+ActiveRecord::Schema.define(version: 20140320044056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "skills", id: false, force: true do |t|
+    t.integer "user_id",     null: false
+    t.integer "skillset_id", null: false
+  end
+
+  add_index "skills", ["skillset_id", "user_id"], name: "index_skills_on_skillset_id_and_user_id", using: :btree
+  add_index "skills", ["user_id", "skillset_id"], name: "index_skills_on_user_id_and_skillset_id", using: :btree
+
   create_table "skillsets", force: true do |t|
-    t.string   "type"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

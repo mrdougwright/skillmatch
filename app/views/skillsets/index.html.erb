@@ -12,7 +12,7 @@
   <tbody>
     <% @skillsets.each do |skillset| %>
       <tr>
-        <!-- <td><%= skillset.type %></td> -->
+        <td><%= skillset.name %></td>
         <td><%= link_to 'Show', skillset %></td>
         <td><%= link_to 'Edit', edit_skillset_path(skillset) %></td>
         <td><%= link_to 'Destroy', skillset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
